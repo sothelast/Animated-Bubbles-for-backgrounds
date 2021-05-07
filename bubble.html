@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubbles</title>
+    <link rel="icon" href="2.jpeg">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(8, 8, 32);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bub {
+            width: 60px;
+            height: 60px;
+            border: 1px solid white;
+            box-shadow: inset 1px -1px 5px white;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, .01);
+            backdrop-filter: blur(2px);
+            position: absolute;
+            bottom: -70px;
+            /* animation: bubble 3s ease-in infinite; */
+        }
+        
+        .bub::before {
+            position: absolute;
+            content: "";
+            background-color: white;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            top: 15px;
+            right: 13px;
+            box-shadow: 0px 0px 10px white;
+        }
+        
+        .bub.a {
+            left: 10%;
+            animation: bubble2 2s ease-in 1s infinite;
+        }
+        
+        .bub.b {
+            left: 20%;
+            animation: bubble 1.5s ease-in 1.4s infinite;
+        }
+        
+        .bub.c {
+            left: 28%;
+            animation: bubble 5s ease-in 3.8s infinite;
+        }
+        
+        .bub.d {
+            left: 40%;
+            animation: bubble 1.8s ease-in .5s infinite;
+        }
+        
+        .bub.e {
+            left: 75%;
+            animation: bubble2 2.3s ease-in 2.5s infinite;
+        }
+        
+        .bub.f {
+            left: 90%;
+            animation: bubble 2.5s ease-in 3s infinite;
+        }
+        
+        .bub.g {
+            left: 60%;
+            animation: bubble 2.2s ease-in 2s infinite;
+        }
+        
+        .bub.k {
+            left: 50%;
+            animation: bubble 1.6s ease-in 2s infinite;
+        }
+        
+        .bub.i {
+            left: 65%;
+            animation: bubble2 1.8s ease-in 2.1s infinite;
+        }
+        
+        .bub.j {
+            left: 3%;
+            animation: bubble 2s ease-in 1.5s infinite;
+        }
+        
+        .bub.h {
+            left: 35%;
+            animation: bubble2 3s ease-in infinite;
+        }
+        
+        @keyframes bubble {
+            0% {
+                opacity: 0;
+            }
+            10%,
+            93% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(90px, -700px);
+                display: none;
+            }
+        }
+        
+        @keyframes bubble2 {
+            0% {
+                opacity: 0;
+            }
+            10%,
+            93% {
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-90px, -700px);
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <span class="bub a "></span>
+        <span class="bub b "></span>
+        <span class="bub c "></span>
+        <span class="bub d"></span>
+        <span class="bub e"></span>
+        <span class="bub f"></span>
+        <span class="bub g"></span>
+        <span class="bub h"></span>
+        <span class="bub i"></span>
+        <span class="bub j "></span>
+        <span class="bub k"></span>
+    </div>
+</body>
+
+</html>
